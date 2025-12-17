@@ -19,7 +19,7 @@ app.use(express.json());
 //Routes
 app.use("/api/auth",authRoutes);
 app.use("/api/session",sessionRoutes);
-app.use("/api/question",questionRoutes);
+//app.use("/api/question",questionRoutes);
 
 //app.use("/api/ai/generate-questions",protect,generateInterviewQuestions);
 //app.use("/api/ai/generate-explanation",protect,generateExplanation);
