@@ -4,6 +4,7 @@ const cors=require("cors");
 const path=require("path")
 const connectDB=require("./config/db");
 const authRoutes=require("./routes/authRoutes");
+const sessionRoutes=require("./routes/sessionRoutes");
 const app=express();
 //add middleware to handle CORS 
 
@@ -17,8 +18,8 @@ app.use(express.json());
 
 //Routes
 app.use("/api/auth",authRoutes);
-//app.use("/api/session",sessionRoutes);
-//app.use("/api/question",questionRoutes);
+app.use("/api/session",sessionRoutes);
+app.use("/api/question",questionRoutes);
 
 //app.use("/api/ai/generate-questions",protect,generateInterviewQuestions);
 //app.use("/api/ai/generate-explanation",protect,generateExplanation);
